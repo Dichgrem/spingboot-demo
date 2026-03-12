@@ -1,19 +1,10 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/testdb
+    url: jdbc:postgresql://localhost:5433/testdb
     username: brant
     password: password
     driver-class-name: org.postgresql.Driver
-
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
-    open-in-view: false
-
-  sql:
-    init:
-      mode: never
-
-server:
-  port: 8080
