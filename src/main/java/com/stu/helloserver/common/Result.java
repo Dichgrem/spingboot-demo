@@ -16,10 +16,10 @@ public class Result<T> {
         return result;
     }
 
-    public static <T> Result<T> error(String msg) {
+    public static <T> Result<T> error(ResultCode resultCode) {
         Result<T> result = new Result<>();
-        result.code = 500;
-        result.msg = msg;
+        result.code = resultCode.getCode();
+        result.msg = resultCode.getMsg();
         return result;
     }
 
